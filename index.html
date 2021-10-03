@@ -6,13 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Научиться учиться</title>
     <style type="text/css">
+        /* @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap'); */
+
+        @font-face {
+            font-family: 'Rubik';
+            src: url('fonts/Rubik-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?7gfrqi');
+            src: url('fonts/icomoon.eot?7gfrqi#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?7gfrqi') format('truetype'),
+                url('fonts/icomoon.woff?7gfrqi') format('woff'),
+                url('fonts/icomoon.svg?7gfrqi#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icomoon' !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .icon-arrow-right:before {
+            content: "\ea3c";
+        }
+
+
         .region-widget-wrap {
             width: 100%;
-            font-family: Rubik, sans-serif;
+            font-family: 'Rubik', sans-serif;
             color: #3e3e3c;
         }
 
-        .region-widget-wrap .cards {
+        /* region-widget = rw */
+        .rw {
             width: 1148px;
             margin: auto;
             display: flex;
@@ -23,7 +66,7 @@
 
         }
 
-        .region-widget-wrap .card {
+        .rw__card {
             width: 205.6px;
             margin: 0 12px;
             background-color: #eff4f8;
@@ -36,7 +79,7 @@
             flex-direction: column;
         }
 
-        .region-widget-wrap .stretched-link:after {
+        .rw__stretched-link:after {
             position: absolute;
             top: 0;
             right: 0;
@@ -48,22 +91,22 @@
             background-color: transparent
         }
 
-        .region-widget-wrap .card:hover {
+        .rw__card:hover {
             box-shadow: 0 2px 8px rgb(18 17 36 / 10%), 0 4px 32px rgb(18 17 36 / 20%);
         }
 
-        .region-widget-wrap .card__img {
+        .rw__card-img {
             max-width: 7rem;
             height: auto;
             padding: 1.25rem 1.25rem 0;
             margin-bottom: 1.25rem;
         }
 
-        .region-widget-wrap .card__body {
+        .rw__card-body {
             padding: 0 1.25rem;
         }
 
-        .region-widget-wrap .card__title {
+        .rw__card-title {
             color: #3e3e3c;
             font-size: 1.25rem;
             line-height: 1.15;
@@ -71,14 +114,27 @@
             text-decoration: none;
         }
 
-        .region-widget-wrap .card__footer {
+        .rw__card-footer {
             border-color: #c8c8d1;
             padding: .75rem 1.25rem;
             margin-top: auto;
         }
 
-        .region-widget-wrap .card__icon_arrow_next {
+        .rw__card-icon {
             color: #31b7bc;
+            font-family: icomoon;
+            font-style: normal;
+            font-weight: 400;
+            font-feature-settings: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .rw__card-icon_arrow_next::before {
+            content: "\ea3c";
         }
 
     </style>
@@ -86,65 +142,65 @@
 
 <body>
     <section class="region-widget-wrap">
-        <div class="cards">
-            <div class="card">
-                <div class="card__img-wrap">
-                    <img class="card__img" src="images/img-1.png" alt="">
+        <div class="rw">
+            <div class="rw__card">
+                <div class="rw__card-img-wrap">
+                    <img class="rw__card-img" src="images/img-1.png" alt="">
                 </div>
-                <div class="card__body">
-                    <a class="card__title stretched-link" target="_self"
+                <div class="rw__card-body">
+                    <a class="rw__card-title rw__stretched-link" target="_self"
                         href="https://xn--80apaohbc3aw9e.xn--p1ai/landing/wheel_life/">Трекер финансового здоровья</a>
                 </div>
-                <div class="card__footer">
-                    <div class="card__icon_arrow_next">→</div>
+                <div class="rw__card-footer">
+                    <div class="rw__card-icon rw__card-icon_arrow_next"></div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card__img-wrap">
-                    <img class="card__img" src="images/img-2.png" alt="">
+            <div class="rw__card">
+                <div class="rw__card-img-wrap">
+                    <img class="rw__card-img" src="images/img-2.png" alt="">
                 </div>
-                <div class="card__body">
-                    <a class="card__title stretched-link" target="_self"
+                <div class="rw__card-body">
+                    <a class="rw__card-title rw__stretched-link" target="_self"
                         href="https://xn--80apaohbc3aw9e.xn--p1ai/landing/finansy/">Финансы на каждый день здоровья</a>
                 </div>
-                <div class="card__footer">
-                    <div class="card__icon_arrow_next">→</div>
+                <div class="rw__card-footer">
+                    <div class="rw__card-icon rw__card-icon_arrow_next"></div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card__img-wrap">
-                    <img class="card__img" src="images/img-3.png" alt="">
+            <div class="rw__card">
+                <div class="rw__card-img-wrap">
+                    <img class="rw__card-img" src="images/img-3.png" alt="">
                 </div>
-                <div class="card__body">
-                    <a class="card__title stretched-link" target="_self"
+                <div class="rw__card-body">
+                    <a class="rw__card-title rw__stretched-link" target="_self"
                         href="https://xn--80apaohbc3aw9e.xn--p1ai/landing/ipoteka/">Ипотека</a>
                 </div>
-                <div class="card__footer">
-                    <div class="card__icon_arrow_next">→</div>
+                <div class="rw__card-footer">
+                    <div class="rw__card-icon rw__card-icon_arrow_next"></div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card__img-wrap">
-                    <img class="card__img" src="images/img-4.png" alt="">
+            <div class="rw__card">
+                <div class="rw__card-img-wrap">
+                    <img class="rw__card-img" src="images/img-4.png" alt="">
                 </div>
-                <div class="card__body">
-                    <a class="card__title stretched-link" target="_self"
+                <div class="rw__card-body">
+                    <a class="rw__card-title rw__stretched-link" target="_self"
                         href="https://xn--80apaohbc3aw9e.xn--p1ai/landing/investicii/">Инвестиции</a>
                 </div>
-                <div class="card__footer">
-                    <div class="card__icon_arrow_next">→</div>
+                <div class="rw__card-footer">
+                    <div class="rw__card-icon rw__card-icon_arrow_next"></div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card__img-wrap">
-                    <img class="card__img" src="images/img-5.png" alt="">
+            <div class="rw__card">
+                <div class="rw__card-img-wrap">
+                    <img class="rw__card-img" src="images/img-5.png" alt="">
                 </div>
-                <div class="card__body">
-                    <a class="card__title stretched-link" target="_self"
+                <div class="rw__card-body">
+                    <a class="rw__card-title rw__stretched-link" target="_self"
                         href="https://xn--80apaohbc3aw9e.xn--p1ai/landing/guide/">Учебник</a>
                 </div>
-                <div class="card__footer">
-                    <div class="card__icon_arrow_next">→</div>
+                <div class="rw__card-footer">
+                    <div class="rw__card-icon rw__card-icon_arrow_next"></div>
                 </div>
             </div>
         </div>
