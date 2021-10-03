@@ -15,6 +15,7 @@
             font-style: normal;
             font-display: block;
         }
+
         @font-face {
             font-family: 'icomoon';
             src: url('fonts/icomoon.eot?7gfrqi');
@@ -56,7 +57,7 @@
 
         /* region-widget = rw */
         .rw {
-            width: 1148px;
+            max-width: 1248px;
             margin: auto;
             display: flex;
             justify-content: flex-start;
@@ -67,8 +68,8 @@
         }
 
         .rw__card {
-            width: 205.6px;
-            margin: 0 12px;
+            /* flex-basis: 225.6px; */
+            margin: 0 .75rem;
             background-color: #eff4f8;
             color: #3e3e3c;
             position: relative;
@@ -77,6 +78,8 @@
             border-radius: .25rem;
             display: flex;
             flex-direction: column;
+
+            margin-bottom: 1.5rem;
         }
 
         .rw__stretched-link:after {
@@ -135,6 +138,26 @@
 
         .rw__card-icon_arrow_next::before {
             content: "\ea3c";
+        }
+
+        /* адаптивность */
+
+        .rw__card {
+            flex-basis: 100%;
+        }
+
+        @media (min-width: 576px) {
+
+            .rw__card {
+                flex-basis: calc(50% - 1.5rem);
+            }
+        }
+
+        @media (min-width: 1200px) {
+
+            .rw__card {
+                flex-basis: calc(20% - 1.5rem);
+            }
         }
 
     </style>
