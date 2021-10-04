@@ -28,8 +28,7 @@
 
         }
 
-        .rw__card {
-            border: 1px solid red;
+        .rw__card { border: 1px solid red !important;
             flex-basis: calc(20% - 1.5rem);
             margin: 0 .75rem;
             background-color: #eff4f8;
@@ -40,8 +39,8 @@
             border-radius: .25rem;
             display: flex;
             flex-direction: column;
-            min-height: 100%;
-            margin-bottom: 1.5rem;
+            /* min-height: 100%; */
+            min-height: 314px;
         }
 
         .rw__stretched-link:after {
@@ -124,9 +123,14 @@
             box-shadow: none;
             border: none;
         }
+        .bx-viewport { 
+            height: 360px !important;
+        }
 
-        .bxslider {
+        .bxslider { 
             display: flex;
+            padding: 21px 0;
+            min-height: 314px; /* 314+2*21=360 */
         }
 
         .bx-wrapper img {
