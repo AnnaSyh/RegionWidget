@@ -121,6 +121,8 @@
 
         .bx-wrapper {
             margin: auto;
+            box-shadow: none;
+            border: none;
         }
 
         .bxslider {
@@ -132,28 +134,52 @@
         }
     </style>
     <script>
-        $(function () {
-            $('.bxslider').bxSlider({
-                nextText: '',
-                prevText: '',
-                pager: false,
-                controls: true,
-                minSlides: 5,
-                maxSlides: 5,
-                moveSlides: 1,
-                slideWidth: 226,
-            });
-        });
 
-        if ($(window).width() < 990) { 
-            // console.log('width = ', $(window).width());
-            let myslider = $('.bxslider').bxSlider({
-                minSlides: 3,
-                maxSlides: 3,
+        if ($(window).width() <= 480) {
+            console.log('width = ', $(window).width());
+            $(function () {
+                $('.bxslider').bxSlider({
+                    nextText: '',
+                    prevText: '',
+                    pager: false,
+                    controls: true,
+                    minSlides: 1,
+                    maxSlides: 1,
+                    moveSlides: 1,
+                    slideWidth: 226,
+                });
+            });
+        } else if ($(window).width() < 990) {
+            console.log('width = ', $(window).width());
+            $(function () {
+                $('.bxslider').bxSlider({
+                    nextText: '',
+                    prevText: '',
+                    pager: false,
+                    controls: true,
+                    minSlides: 3,
+                    maxSlides: 3,
+                    moveSlides: 1,
+                    slideWidth: 226,
+                });
+            });
+        } else {
+            console.log('width = ', $(window).width());
+            $(function () {
+                $('.bxslider').bxSlider({
+                    nextText: '',
+                    prevText: '',
+                    pager: false,
+                    controls: true,
+                    minSlides: 5,
+                    maxSlides: 5,
+                    moveSlides: 1,
+                    slideWidth: 226,
+                });
             });
         };
 
-        
+
 
     </script>
 </head>
