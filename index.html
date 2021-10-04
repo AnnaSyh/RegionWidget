@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Научиться учиться</title>
+
+    <link href="jquery.bxslider.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="jquery.bxslider.min.js"></script>
+
     <style type="text/css">
-        .region-widget-wrap {
+        /* .region-widget-wrap {
             width: 100%;
-            /* font-family: 'Rubik', sans-serif; */
             color: #3e3e3c;
-        }
+        } */
 
         /* region-widget = rw */
         .rw {
@@ -25,6 +29,7 @@
         }
 
         .rw__card {
+            border: 1px solid red;
             flex-basis: calc(20% - 1.5rem);
             margin: 0 .75rem;
             background-color: #eff4f8;
@@ -35,7 +40,7 @@
             border-radius: .25rem;
             display: flex;
             flex-direction: column;
-            min-height: 270px;
+            min-height: 100%;
             margin-bottom: 1.5rem;
         }
 
@@ -55,11 +60,22 @@
             box-shadow: 0 2px 8px rgb(18 17 36 / 10%), 0 4px 32px rgb(18 17 36 / 20%);
         }
 
+        .rw__card-img-wrap {
+            height: 158px;
+            text-align: center;
+            margin-bottom: 1.25rem;
+            overflow: hidden;
+        }
+
+        .rw__card-img-wrap img {
+            object-fit: contain;
+        }
+
         .rw__card-img {
             max-width: 7rem;
             height: auto;
             padding: 1.25rem 1.25rem 0;
-            margin-bottom: 1.25rem;
+            /* margin-bottom: 1.25rem; */
         }
 
         .rw__card-body {
@@ -102,12 +118,50 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+
+        .bx-wrapper {
+            margin: auto;
+        }
+
+        .bxslider {
+            display: flex;
+        }
+
+        .bx-wrapper img {
+            margin: auto;
+        }
     </style>
+    <script>
+        $(function () {
+            $('.bxslider').bxSlider({
+                nextText: '',
+                prevText: '',
+                pager: false,
+                controls: true,
+                minSlides: 5,
+                maxSlides: 5,
+                moveSlides: 1,
+                slideWidth: 226,
+            });
+        });
+
+        if ($(window).width() < 990) { 
+            // console.log('width = ', $(window).width());
+            let myslider = $('.bxslider').bxSlider({
+                minSlides: 3,
+                maxSlides: 3,
+            });
+        };
+
+        
+
+    </script>
 </head>
 
 <body>
-    <section class="region-widget-wrap">
-        <div class="rw">
+
+    <ul class="bxslider">
+        <li>
             <div class="rw__card">
                 <div class="rw__card-img-wrap">
                     <img class="rw__card-img" src="images/img-1.png" alt="">
@@ -120,6 +174,8 @@
                     <div class="rw__icon_arrow"></div>
                 </div>
             </div>
+        </li>
+        <li>
             <div class="rw__card">
                 <div class="rw__card-img-wrap">
                     <img class="rw__card-img" src="images/img-2.png" alt="">
@@ -132,6 +188,8 @@
                     <div class="rw__icon_arrow"></div>
                 </div>
             </div>
+        </li>
+        <li>
             <div class="rw__card">
                 <div class="rw__card-img-wrap">
                     <img class="rw__card-img" src="images/img-3.png" alt="">
@@ -144,6 +202,8 @@
                     <div class="rw__icon_arrow"></div>
                 </div>
             </div>
+        </li>
+        <li>
             <div class="rw__card">
                 <div class="rw__card-img-wrap">
                     <img class="rw__card-img" src="images/img-4.png" alt="">
@@ -156,6 +216,8 @@
                     <div class="rw__icon_arrow"></div>
                 </div>
             </div>
+        </li>
+        <li>
             <div class="rw__card">
                 <div class="rw__card-img-wrap">
                     <img class="rw__card-img" src="images/img-5.png" alt="">
@@ -168,6 +230,8 @@
                     <div class="rw__icon_arrow"></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </li>
+
+    </ul>
+
 </body>
