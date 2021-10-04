@@ -6,52 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Научиться учиться</title>
     <style type="text/css">
-        /* @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap'); */
-
-        @font-face {
-            font-family: 'Rubik';
-            src: url('fonts/Rubik-Regular.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-            font-display: block;
-        }
-
-        @font-face {
-            font-family: 'icomoon';
-            src: url('fonts/icomoon.eot?7gfrqi');
-            src: url('fonts/icomoon.eot?7gfrqi#iefix') format('embedded-opentype'),
-                url('fonts/icomoon.ttf?7gfrqi') format('truetype'),
-                url('fonts/icomoon.woff?7gfrqi') format('woff'),
-                url('fonts/icomoon.svg?7gfrqi#icomoon') format('svg');
-            font-weight: normal;
-            font-style: normal;
-            font-display: block;
-        }
-
-        [class^="icon-"],
-        [class*=" icon-"] {
-            /* use !important to prevent issues with browser extensions that change fonts */
-            font-family: 'icomoon' !important;
-            speak: never;
-            font-style: normal;
-            font-weight: normal;
-            font-variant: normal;
-            text-transform: none;
-            line-height: 1;
-
-            /* Better Font Rendering =========== */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .icon-arrow-right:before {
-            content: "\ea3c";
-        }
-
-
         .region-widget-wrap {
             width: 100%;
-            font-family: 'Rubik', sans-serif;
+            /* font-family: 'Rubik', sans-serif; */
             color: #3e3e3c;
         }
 
@@ -68,7 +25,7 @@
         }
 
         .rw__card {
-            /* flex-basis: 225.6px; */
+            flex-basis: calc(20% - 1.5rem);
             margin: 0 .75rem;
             background-color: #eff4f8;
             color: #3e3e3c;
@@ -78,7 +35,7 @@
             border-radius: .25rem;
             display: flex;
             flex-direction: column;
-
+            min-height: 270px;
             margin-bottom: 1.5rem;
         }
 
@@ -136,13 +93,9 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        .rw__card-icon_arrow_next::before {
-            content: "\ea3c";
-        }
-
         /* адаптивность */
 
-        .rw__card {
+        /* .rw__card {
             flex-basis: 100%;
         }
 
@@ -158,8 +111,7 @@
             .rw__card {
                 flex-basis: calc(20% - 1.5rem);
             }
-        }
-
+        } */
     </style>
 </head>
 
@@ -175,7 +127,7 @@
                         href="https://xn--80apaohbc3aw9e.xn--p1ai/landing/wheel_life/">Трекер финансового здоровья</a>
                 </div>
                 <div class="rw__card-footer">
-                    <div class="rw__card-icon rw__card-icon_arrow_next"></div>
+                    <img class="rw__card-icon" src="images/arrow-next.png" alt="">
                 </div>
             </div>
             <div class="rw__card">
@@ -187,7 +139,7 @@
                         href="https://xn--80apaohbc3aw9e.xn--p1ai/landing/finansy/">Финансы на каждый день здоровья</a>
                 </div>
                 <div class="rw__card-footer">
-                    <div class="rw__card-icon rw__card-icon_arrow_next"></div>
+                    <img class="rw__card-icon" src="images/arrow-next.png" alt="">
                 </div>
             </div>
             <div class="rw__card">
@@ -199,7 +151,7 @@
                         href="https://xn--80apaohbc3aw9e.xn--p1ai/landing/ipoteka/">Ипотека</a>
                 </div>
                 <div class="rw__card-footer">
-                    <div class="rw__card-icon rw__card-icon_arrow_next"></div>
+                    <img class="rw__card-icon" src="images/arrow-next.png" alt="">
                 </div>
             </div>
             <div class="rw__card">
@@ -211,7 +163,7 @@
                         href="https://xn--80apaohbc3aw9e.xn--p1ai/landing/investicii/">Инвестиции</a>
                 </div>
                 <div class="rw__card-footer">
-                    <div class="rw__card-icon rw__card-icon_arrow_next"></div>
+                    <img class="rw__card-icon" src="images/arrow-next.png" alt="">
                 </div>
             </div>
             <div class="rw__card">
@@ -223,7 +175,7 @@
                         href="https://xn--80apaohbc3aw9e.xn--p1ai/landing/guide/">Учебник</a>
                 </div>
                 <div class="rw__card-footer">
-                    <div class="rw__card-icon rw__card-icon_arrow_next"></div>
+                    <img class="rw__card-icon" src="images/arrow-next.png" alt="">
                 </div>
             </div>
         </div>
